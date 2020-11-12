@@ -1,5 +1,4 @@
-const nodemailer = require('nodemailer'),
-      {EMAIL, PASSWORD} = process.env;
+const nodemailer = require('nodemailer');
 
 module.exports = {
     email: async(req, res) => {
@@ -13,17 +12,27 @@ module.exports = {
                 secure: false,
                 requireTLS: true,
                 auth: {
-                    user: EMAIL,
-                    pass: PASSWORD
+                    user: process.env.EMAIL,
+                    pass: process.env.PASSWORD
                 }
             })
 
             let info = await transporter.sendMail({
                 from: `${firstName} ${lastName}, ${email}`,
-                to: EMAIL,
+                to: process.env.EMAIL,
                 subject: subject,
                 text: message,
-                html: `<div>${message}</div>`
+                html: `<div>
+                        <img src='cid:banner'/>
+                        <p>${message}<p>
+                       </div>`,
+                attachments: [
+                    {
+                        filename: 'email-banner.png',
+                        path: __dirname + '/assets/email-banner.png',
+                        cid: 'banner'
+                    }
+                ]
             }, (err, res) => {
                 if(err){
                     console.log(err)
