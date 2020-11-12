@@ -1,0 +1,10 @@
+{
+  "name": "pkmk-photos-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matt Bodily",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
