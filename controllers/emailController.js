@@ -23,16 +23,8 @@ module.exports = {
                 subject: subject,
                 text: message,
                 html: `<div>
-                        <img src='cid:banner'/>
                         <p>${message}<p>
-                       </div>`,
-                attachments: [
-                    {
-                        filename: 'email-banner.png',
-                        path: __dirname + '/assets/email-banner.png',
-                        cid: 'banner'
-                    }
-                ]
+                       </div>`
             }, (err, res) => {
                 if(err){
                     console.log(err)
