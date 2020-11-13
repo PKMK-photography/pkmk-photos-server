@@ -29,8 +29,8 @@ module.exports = {
                         <p>Return email: ${email}</p>
                        </div>`,
                 attachments: [{
-                    filename: 'pkmk-banner.svg',
-                    path: __dirname + '/assets/pkmk-banner.svg',
+                    filename: 'pkmk-banner.png',
+                    path: __dirname + '/assets/pkmk-banner.png',
                     cid: 'banner'
                 }]
             }, (err, res) => {
