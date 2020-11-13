@@ -23,10 +23,16 @@ module.exports = {
                 subject: subject,
                 text: message,
                 html: `<div>
+                        <img src=cid:banner/>
                         <p>New Message from ${firstName} ${lastName}</p>
                         <p>${message}<p>
                         <p>Return email: ${email}</p>
-                       </div>`
+                       </div>`,
+                attachments: [{
+                    filename: 'pkmk-banner.svg',
+                    path: __dirname + '/assets/pkmk-banner.svg',
+                    cid: 'banner'
+                }]
             }, (err, res) => {
                 if(err){
                     console.log(err)
