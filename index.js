@@ -1,7 +1,7 @@
-const { email } = require('./controllers/emailController');
-
 require('dotenv').config();
 const express = require('express'),
+      massive = require('massive'),
+      session = require('express-session'),
       emailCtrl = require('./controllers/emailController'),
       app = express();
 
