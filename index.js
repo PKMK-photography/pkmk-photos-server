@@ -25,4 +25,4 @@ massive({
 //email endpoint
 app.post('/api/email', emailCtrl.email);
 
-app.listen(5555, () => console.log('Server running on 5555'));
+app.listen(SERVER_PORT, () => console.log(`Server running on ${SERVER_PORT}`));
