@@ -4,9 +4,16 @@
   "main": "index.js",
   "author": "Matt Bodily",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemailer": "^6.4.16"
+  },
+  "engines": {
+    "node": "12.19.0"
   }
 }
